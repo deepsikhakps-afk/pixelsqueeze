@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PixelSqueeze — Image Compressor & Resizer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-icon">◈</span>
+    <span class="brand-name">PixelSqueeze</span>
+  </div>
+  <p class="tagline">Compress & resize images entirely in your browser — nothing uploaded, nothing stored.</p>
+</header>
+
+<main class="container">
+
+  <section class="dropzone" id="dropzone">
+    <input type="file" id="fileInput" accept="image/*" hidden>
+    <div class="dropzone-inner">
+      <span class="dropzone-icon">⇪</span>
+      <p><strong>Drag & drop</strong> an image here, or <button id="browseBtn" class="link-btn">browse</button></p>
+      <p class="hint">JPG, PNG, WebP supported</p>
+    </div>
+  </section>
+
+  <section class="workspace hidden" id="workspace">
+
+    <div class="preview-grid">
+      <div class="preview-card">
+        <h3>Original</h3>
+        <img id="originalImg" alt="Original preview">
+        <p class="meta" id="originalMeta">—</p>
+      </div>
+      <div class="preview-card">
+        <h3>Compressed</h3>
+        <img id="compressedImg" alt="Compressed preview">
+        <p class="meta" id="compressedMeta">—</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="control-row">
+        <label for="qualityRange">Quality <span id="qualityValue">80</span>%</label>
+        <input type="range" id="qualityRange" min="1" max="100" value="80">
+      </div>
+
+      <div class="control-row two-col">
+        <div>
+          <label for="widthInput">Width (px)</label>
+          <input type="number" id="widthInput" min="1">
+        </div>
+        <div>
+          <label for="heightInput">Height (px)</label>
+          <input type="number" id="heightInput" min="1">
+        </div>
+      </div>
+
+      <div class="control-row checkbox-row">
+        <label><input type="checkbox" id="lockAspect" checked> Lock aspect ratio</label>
+      </div>
+
+      <div class="control-row">
+        <label for="formatSelect">Output format</label>
+        <select id="formatSelect">
+          <option value="image/jpeg">JPEG</option>
+          <option value="image/webp">WebP</option>
+          <option value="image/png">PNG</option>
+        </select>
+      </div>
+
+      <div class="control-row buttons-row">
+        <button id="resetBtn" class="btn secondary">Reset</button>
+        <button id="downloadBtn" class="btn primary">Download</button>
+      </div>
+
+      <p class="savings" id="savingsText"></p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Built with vanilla HTML, CSS & JS — all processing happens on-device via the Canvas API.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
