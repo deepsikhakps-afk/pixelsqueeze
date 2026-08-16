@@ -64,6 +64,8 @@ pixelsqueeze/
 └── README.md
 ```
 
+#
+
 ## How It Works
 
 1. The uploaded image is drawn onto an off-screen `<canvas>` at the target width/height.
