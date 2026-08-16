@@ -64,7 +64,7 @@ pixelsqueeze/
 └── README.md
 ```
 
-# Screenhot
+# Screenhots
 ![alt text](image.png)
 
 ## How It Works
