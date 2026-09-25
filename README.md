@@ -69,11 +69,7 @@ pixelsqueeze/
 
 ## How It Works
 
-1. The uploaded image is drawn onto an off-screen `<canvas>` at the target width/height.
-2. `canvas.toBlob()` re-encodes the canvas into the chosen format (JPEG/WebP/PNG) at the selected quality.
-3. The resulting blob is compared against the original file size and offered as a download — all without any network request.
-
-## License
+1. The uploaded image is drawn onto an off-screen `<canvas>` at the target width/heig
 
 MIT — free to use, modify, and distribute.
 
