@@ -75,7 +75,7 @@ pixelsqueeze/
 
 ## License
 
-MIT — free to use, modify, and d.
+MIT — free to use, modify, and distribute.
 
 ## Author
 
