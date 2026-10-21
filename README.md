@@ -65,7 +65,7 @@ pixelsqueeze/
 ```
 
 # Screenhots
-![alt text](image.png)
+(image.png)
 
 ## How It Works
 
